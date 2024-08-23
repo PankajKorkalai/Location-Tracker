@@ -31,6 +31,7 @@ app.get("/", (req, resp) => {
 });
 
 // Start server
-server.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+const PORT = process.env.PORT || 3000;  // Use PORT environment variable
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
