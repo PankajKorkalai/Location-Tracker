@@ -16,7 +16,7 @@ if (navigator.geolocation) {
 const map = L.map("map").setView([0, 0], 12);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "Gaurav"
+    attribution: "Pankaj"
 }).addTo(map);
 
 const markers = {};
