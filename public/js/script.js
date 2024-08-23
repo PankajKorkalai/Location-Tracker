@@ -23,7 +23,7 @@ const markers = {};
 
 socket.on("receive-location", (data) => {
     const { id, latitude, longitude } = data;
-    // map.setView([latitude, longitude], 12); // Adjust zoom level as needed
+    map.setView([latitude, longitude], 12); // Adjust zoom level as needed
     if (markers[id]) {
         markers[id].setLatLng([latitude, longitude]);
     } else {
