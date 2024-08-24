@@ -16,14 +16,14 @@ if (navigator.geolocation) {
 const map = L.map("map").setView([0, 0], 12);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "Pankaj and Gaurav"
+    attribution: ""
 }).addTo(map);
 
 const markers = {};
 
 socket.on("receive-location", (data) => {
     const { id, latitude, longitude } = data;
-    map.setView([latitude, longitude], 2); // Adjust zoom level as needed
+    map.setView([latitude, longitude]);
     if (markers[id]) {
         markers[id].setLatLng([latitude, longitude]);
     } else {
